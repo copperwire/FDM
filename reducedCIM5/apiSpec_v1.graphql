@@ -1,0 +1,30 @@
+
+
+type ConductingEquipmentEnum @view {
+    transformer: PowerTransformer
+    busbarsection: BusbarSection
+}
+
+type Terminal @view{
+    name: String
+    conducting_equipment: ConductingEquipmentEnum
+}
+
+type PowerTransformer @view {
+    name: String
+    station: Substation
+    baseVoltage: Int
+    windings: Int!
+}
+
+type BusbarSection @view {
+    name: String
+    station: Substation
+    baseVoltage: Int
+    rank: Int!
+}
+
+type Substation @view {
+    name: String
+    location: Int!
+}
