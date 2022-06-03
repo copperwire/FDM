@@ -1,0 +1,45 @@
+
+{
+    "api":{
+        "externalId": "reducedCIM4",
+        "description": "reducedCIM4",
+        "versions": [
+            {
+                "version": 1,
+                "source": "apiSpec_v1.graphql",
+                "bindings": [
+                    {
+                        "targetName": "Substation",
+                        "dataModelStorageSource": {
+                            "externalId": "Substation"
+                        }
+                    },
+                    {
+                        "targetName": "ConductingEquipmentEnum",
+                        "dataModelStorageSource": {
+                            "externalId": "ConductingEquipmentEnum"
+                        }
+                    },
+                    {
+                        "targetName": "PowerTransformer",
+                        "dataModelStorageSource": {
+                            "externalId": "PowerTransformer"
+                        }
+                    },
+                    {
+                        "targetName": "BusbarSection",
+                        "dataModelStorageSource": {
+                            "externalId": "BusbarSection"
+                        }
+                    },
+                    {
+                        "targetName": "Terminal",
+                        "dataModelStorageSource": {
+                            "externalId": "Terminal"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

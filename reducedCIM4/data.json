@@ -1,0 +1,79 @@
+
+{
+    "Substation": {
+        "spaceExternalId": "reducedCIM4",
+        "model": [
+            "reducedCIM4",
+            "Substation"
+        ],
+        "overwrite": true,
+        "items": [
+            {
+                "externalId": "sub1_eid",
+                "name": "sub1",
+                "location": 1
+            }
+        ]
+    },
+    "BusbarSection": {
+        "spaceExternalId": "reducedCIM4",
+        "model": [
+            "reducedCIM4",
+            "BusbarSection"
+        ],
+        "overwrite": true,
+        "items": [
+            {
+                "externalId": "bus1",
+                "station": "sub1",
+                "baseVoltage": 420,
+                "rank": 1
+            }
+        ]
+    },
+    "ConductingEquipmentEnum":{
+        "spaceExternalId": "reducedCIM4",
+        "model": [
+            "reducedCIM4",
+            "ConductingEquipmentEnum"
+        ],
+        "overwrite": true,
+        "items": [
+            {
+                "externalId": "bus1-ref",
+                "BusbarSection": "bus1"
+            }
+        ]
+    },
+    "Terminal":{
+        "spaceExternalId": "reducedCIM4",
+        "model": [
+            "reducedCIM4",
+            "Terminal"
+        ],
+        "overwrite": true,
+        "items": [
+            {
+                "externalId": "term-bus1",
+                "rank": 1,
+                "conductingEquipment": "bus1"
+            }
+        ]
+    },
+    "PowerTransformer": {
+        "spaceExternalId": "reducedCIM4",
+        "model": [
+            "reducedCIM4",
+            "PowerTransformer"
+        ],
+        "overwrite": true,
+        "items": [
+            {
+                "externalId": "pow1",
+                "station": "sub1",
+                "baseVoltage": 420,
+                "windings": 2
+            }
+        ]
+    }
+}

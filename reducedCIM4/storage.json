@@ -1,0 +1,102 @@
+{
+
+    "items": [
+        {
+            "externalId": "Substation",
+            "properties": {
+                "name": {
+                    "type": "text",
+                    "nullable": true
+                },
+                "location": {
+                    "type": "int",
+                    "nullable": false
+                }
+            }
+        },
+        {
+            "externalId": "ConductingEquipmentEnum",
+            "properties": {
+                "BusbarSection": {
+                    "type": "direct_relation",
+                    "nullable": true,
+                    "targetModel": [
+                        "reducedCIM4",
+                        "BusbarSection"
+                    ]
+                },
+                "PowerTransformer": {
+                    "type": "direct_relation",
+                    "nullable": true,
+                    "targetModel": [
+                        "reducedCIM4",
+                        "PowerTransformer"
+                    ]
+                }
+                }
+        },
+        {
+            "externalId": "PowerTransformer",
+            "properties": {
+                "station": {
+                    "type": "direct_relation",
+                    "nullable": true,
+                    "targetModel": [
+                        "reducedCIM4",
+                        "Substation"
+                    ]
+                },
+                "baseVoltage": {
+                    "type": "numeric",
+                    "nullable": true
+                },
+                "name": {
+                    "type": "text",
+                    "nullable": true
+                },
+                "windings": {
+                    "type": "numeric",
+                    "nullable": false
+                }
+            }
+        },
+        {
+            "externalId": "BusbarSection",
+            "properties": {
+                "station": {
+                    "type": "direct_relation",
+                    "nullable": true,
+                    "targetModel": [
+                        "reducedCIM4",
+                        "Substation"
+                    ]
+                },
+                "baseVoltage": {
+                    "type": "numeric",
+                    "nullable": true
+                },
+                "name": {
+                    "type": "text",
+                    "nullable": true
+                },
+                "rank": {
+                    "type": "int",
+                    "nullable": false
+                }
+            }
+        },
+        {
+            "externalId": "Terminal",
+            "properties": {
+                "name": {
+                    "type": "text",
+                    "nullable": true
+                },
+                "conductingEquipmentEnum": {
+                    "type": "direct_relation",
+                    "nullable": true
+                }
+            }
+        }
+    ]
+}
